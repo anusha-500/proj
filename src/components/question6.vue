@@ -1,7 +1,7 @@
 <template>
 <div id="app">
 <b-form-input v-model="Uppercase_letters" placeholder="Enter lowercase letters" required></b-form-input>
-<b-button @click=uppercase() >Click</b-button>
+<b-button @click=fun() >Click</b-button>
 <b-form-input v-model="res" placeholder="Uppercase" required></b-form-input>
 </div>
 </template>
@@ -24,7 +24,7 @@ console.log("oldvalue:",oldvalue);
 },
 },
 methods:{
-uppercase(){
+fun(){
 this.res = this.Uppercase_letters.toUpperCase();
 },
 }
