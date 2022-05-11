@@ -1,6 +1,8 @@
 <template>
 <div id="app">
-Enter Value:<input type="text" v-model="message" placeholder="enter value" required>
+<b-form-input v-model="Uppercase_letters" placeholder="Enter lowercase letters" required></b-form-input>
+<b-button @click=uppercase() >Click</b-button>
+<b-form-input v-model="res" placeholder="Uppercase" required></b-form-input>
 </div>
 </template>
 <script>
@@ -9,13 +11,22 @@ name: "Question6AA",
 data() {
     return{
     message:"",
+    Uppercase_letters:"",
+    res:""
     }
 },
 watch: {
-message(newvalue, oldvalue) {
+    Uppercase_letters:{
+handler(newvalue, oldvalue) {
 console.log("newvalue:",newvalue);
 console.log("oldvalue:",oldvalue);
 }
+},
+},
+methods:{
+uppercase(){
+this.res = this.Uppercase_letters.toUpperCase();
+},
 }
 }
 </script>
