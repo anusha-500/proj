@@ -10,7 +10,6 @@ export default {
 name: "Question6AA",
 data() {
     return{
-    message:"",
     Uppercase_letters:"",
     res:""
     }
